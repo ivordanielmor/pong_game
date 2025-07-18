@@ -1,8 +1,4 @@
-# HÁZI FELADAT: - Duplázd meg a pálya szélén a másik ütőt(jobb oldalon),
-# és mozgasd "W/S" billentyűkkel! - Állitsd be, hogy ha az ütő fent vagy 
-# lent eléri a képernyő szélét, ne szaladjon tovább.
-# - (Extra): Rajzold ki a labdát is (egy 20x20-as fehér téglalapként), még
-# ha nem mozog, csak legyen látható! 
+# 1. Sebességvektor
 
 import pygame
 
@@ -20,10 +16,10 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Pong játék")
 
 paddle_left = pygame.Rect(50, (HEIGHT - PADDLE_HEIGHT) // 2, PADDLE_WIDTH, PADDLE_HEIGHT)
-
 paddle_right = pygame.Rect(WIDTH - 50 - PADDLE_WIDTH, (HEIGHT - PADDLE_HEIGHT) // 2, PADDLE_WIDTH, PADDLE_HEIGHT)
-
 ball = pygame.Rect(WIDTH // 2 - BALL_SIZE // 2, HEIGHT // 2 - BALL_SIZE // 2, BALL_SIZE, BALL_SIZE)
+
+dx, dy = 5, 5
 
 clock = pygame.time.Clock()
 
@@ -44,6 +40,9 @@ while True:
         paddle_right.y -= PADDLE_SPEED
     if keys[pygame.K_DOWN] and paddle_right.bottom < HEIGHT:
         paddle_right.y += PADDLE_SPEED
+
+    ball.x += dx
+    ball.y += dy
 
     screen.fill(GRAY)
 
