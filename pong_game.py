@@ -1,4 +1,4 @@
-# 3. Ütővel ütközés
+# 4. Kimenés kezelése
 
 import pygame
 
@@ -49,6 +49,10 @@ while True:
 
     if ball.colliderect(paddle_left) or ball.colliderect(paddle_right):
         dx = -dx
+
+    if ball.left <= 0 or ball.right >= WIDTH:
+        ball.center = (WIDTH // 2, HEIGHT // 2)
+        dx, dy = -dx, dy
 
     screen.fill(GRAY)
 
