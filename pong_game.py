@@ -1,4 +1,4 @@
-# 1. Sebességvektor
+# 2. Falaknál pattanás
 
 import pygame
 
@@ -43,6 +43,9 @@ while True:
 
     ball.x += dx
     ball.y += dy
+
+    if ball.top <= 0 or ball.bottom >= HEIGHT:
+        dy = -dy
 
     screen.fill(GRAY)
 
