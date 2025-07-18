@@ -1,4 +1,4 @@
-# 2. Falaknál pattanás
+# 3. Ütővel ütközés
 
 import pygame
 
@@ -46,6 +46,9 @@ while True:
 
     if ball.top <= 0 or ball.bottom >= HEIGHT:
         dy = -dy
+
+    if ball.colliderect(paddle_left) or ball.colliderect(paddle_right):
+        dx = -dx
 
     screen.fill(GRAY)
 
