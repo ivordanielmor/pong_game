@@ -1,7 +1,3 @@
-# HÁZI FELADAT
-# • Adj pontszámlálót: minden alkalommal, amikor a labda kimegy a jobb vagy bal oldalról, növeld a pontot, és jelenítsd meg a képernyő tetején!
-# • Próbáld ki különböző dx, dy értékekkel – hogyan változik a játék nehézsége?
-
 import pygame
 
 WIDTH, HEIGHT = 800, 600
