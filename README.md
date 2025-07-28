@@ -60,11 +60,7 @@ python pong.py
 
 ## 📷 Screenshot
 
-```markdown
 ![Screenshot](./images/screenshot.png)
-```
-
----
 
 ## 📄 License
 
@@ -138,9 +134,7 @@ python pong.py
 
 ## 📷 Képernyőkép
 
-```markdown
 ![Képernyőkép](./images/screenshot.png)
-```
 
 ---
 
