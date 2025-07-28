@@ -1,30 +1,28 @@
-# Snake – Multiplayer Snake Game Based on Pygame
+# Pong – Two-Player Pong Game with Pygame
 
-This is a multiplayer snake game created using the [Pygame](https://www.pygame.org/news) library. Players take turns controlling the snake to eat food, grow longer, and avoid collisions. The game keeps track of scores in a tournament system.
+This is a classic Pong game implemented in Pygame. Two players compete to score points by hitting the ball past the opponent’s paddle. The game increases ball speed after each score to make things more challenging.
 
 ---
 
 ## 🕹️ Gameplay
 
-- At the start, players enter their names.
-- Each player takes turns controlling the snake to earn as many points as possible.
-- Eating red food increases the snake's length and scores points.
-- Yellow food appears randomly and grants more points and length.
-- Each player has lives; collisions cause the loss of a life.
-- The game ends when all players finish their turns, and the highest scorer wins.
+- Two players play:
+  - Left player: `W` (up), `S` (down)
+  - Right player: `↑` (up), `↓` (down)
+- The goal is to score by getting the ball past the opponent’s side.
+- After each point, the ball resets to the center.
+- The ball gradually speeds up after every score.
 
 ---
 
 ## 🧱 Structure
 
-- **Pygame window:** Resizable game field with a HUD displaying scores and player statuses.
-- **Main features:**
-  - Player name input
-  - Snake movement and collision detection
-  - Different types of food (red and yellow)
-  - Life and scoring system
-  - Saving results to a JSON file (`savegame.json`)
-- **Main game loop:** Manages gameplay and player turns.
+- **Pygame window:** 800x600 pixel playing field
+- **Game elements:**
+  - Left and right paddles
+  - Ball that changes direction on collision
+  - Score display at the top
+- **Speed increase:** Ball gets faster with each round
 
 ---
 
@@ -35,7 +33,7 @@ This is a multiplayer snake game created using the [Pygame](https://www.pygame.o
 - [Python 3](https://www.python.org/)
 - [Pygame](https://www.pygame.org/news)
 
-Install pygame with pip:
+Install with pip:
 
 ```bash
 pip install pygame
@@ -43,27 +41,28 @@ pip install pygame
 
 ### Running the game
 
-Save the file as snake.py, then run:
+Save the file as `pong.py` and run:
 
 ```bash
-python snake.py
+python pong.py
 ```
 
 ---
 
 ## 🧠 Features Overview
 
-- Multiplayer snake game with turn-based control  
-- Tournament results saved in a JSON file (savegame.json)  
-- Random special food (yellow) giving extra points and length  
-- Life system for each player  
-- Supports resizable window  
+- Real-time two-player Pong game  
+- Increasing difficulty via faster ball  
+- Wall and paddle collision detection  
+- Score display  
 
 ---
 
 ## 📷 Screenshot
 
+```markdown
 ![Screenshot](./images/screenshot.png)
+```
 
 ---
 
@@ -73,37 +72,35 @@ This project is free to use for learning purposes.
 
 ---
 
-**Have fun playing! 🐍**
+**Have fun playing! 🏓**
 
 ---
 
-# Snake – Pygame alapú többszemélyes kígyós játék
+# Pong – Kétjátékos Pong játék Pygame segítségével
 
-Ez egy többszemélyes kígyós játék, amelyet a [Pygame](https://www.pygame.org/news) könyvtár segítségével készítettünk. A játékosok felváltva irányítják a kígyót, hogy egyenek, növekedjenek és elkerüljék az ütközéseket. A játék versenyrendszerben tartja nyilván a pontszámokat.
+Ez egy klasszikus Pong játék Pygame-ben megvalósítva. Két játékos egymás ellen játszik, a cél az ellenfél legyőzése pontszerzéssel. A játék folyamatosan növeli a labda sebességét, hogy fokozza a kihívást.
 
 ---
 
 ## 🕹️ Játékmenet
 
-- A játék elején a játékosok beírják a nevüket.
-- Minden játékos felváltva irányítja a kígyót, hogy minél több pontot szerezzen.
-- A piros étel elfogyasztása növeli a kígyó hosszát és pontokat ad.
-- Sárga étel véletlenszerűen jelenik meg, több pontot és hosszabbodást ad.
-- Minden játékosnak van élete; az ütközések életvesztéssel járnak.
-- A játék akkor ér véget, amikor minden játékos befejezte a körét, és a legtöbb pontot szerző nyer.
+- Két játékos játszik:
+  - Bal oldali játékos: `W` (fel), `S` (le)
+  - Jobb oldali játékos: `↑` (fel), `↓` (le)
+- A cél az, hogy a labdát az ellenfél oldalán túlra juttassuk.
+- Minden pontszerzés után a labda újraindul középről.
+- A labda minden kör után egyre gyorsabb lesz.
 
 ---
 
 ## 🧱 Felépítés
 
-- **Pygame ablak:** Átméretezhető játéktér, HUD-dal, ami mutatja a pontszámokat és a játékos állapotát.
-- **Főbb funkciók:**
-  - Játékosnév bevitele
-  - Kígyó mozgás és ütközésellenőrzés
-  - Különböző típusú étel (piros és sárga)
-  - Élet- és pontszámrendszer
-  - Eredmények mentése JSON fájlba (`savegame.json`)
-- **Fő játékhurok:** Kezeli a játékmenetet és a játékosok köröket.
+- **Pygame ablak:** 800x600 pixel méretű játéktér
+- **Játék elemei:**
+  - Bal és jobb oldali ütő (paddle)
+  - Labda, amely irányt vált az ütközések során
+  - Pontszámláló a képernyő tetején
+- **Sebességnövekedés:** A labda sebessége nő minden pontszerzés után
 
 ---
 
@@ -122,34 +119,35 @@ pip install pygame
 
 ### A játék futtatása
 
-Mentse a fájlt `snake.py` néven, majd futtassa:
+Mentse a fájlt `pong.py` néven, majd futtassa:
 
 ```bash
-python snake.py
+python pong.py
 ```
 
 ---
 
 ## 🧠 Funkciók összefoglalása
 
-- Többszemélyes kígyós játék körökre osztott irányítással  
-- Versenyeredmények mentése JSON fájlba (savegame.json)  
-- Véletlenszerű speciális étel (sárga), ami extra pontot és hosszabbodást ad  
-- Életrendszer minden játékosnak  
-- Átméretezhető ablak támogatása  
+- Kétjátékos Pong játék valós időben  
+- Növekvő nehézség a gyorsuló labda révén  
+- Pályahatárok és ütőütközés detektálása  
+- Pontszámláló megjelenítése  
 
 ---
 
 ## 📷 Képernyőkép
 
+```markdown
 ![Képernyőkép](./images/screenshot.png)
+```
 
 ---
 
 ## 📄 Licenc
 
-Ez a projekt tanulási célokra szabadon használható.
+Ez a projekt tanulási célokra szabadon felhasználható.
 
 ---
 
-**Kellemes játékot! 🐍**
+**Jó játékot! 🏓**
